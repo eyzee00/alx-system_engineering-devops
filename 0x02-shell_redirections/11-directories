@@ -1,2 +1,2 @@
 #!/bin/bash
-bin/ls -dA | wc -l 
+find -mindepth 1 -maxdepth 1 -type d | wc -l 
