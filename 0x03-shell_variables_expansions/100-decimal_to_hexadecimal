@@ -1,0 +1,2 @@
+#!/bin/bash
+echo "ibase=A;obase=F;$DECIMAL" | bc
