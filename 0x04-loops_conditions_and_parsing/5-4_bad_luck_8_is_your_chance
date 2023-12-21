@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# this script prints "bad luck" in 4th iteration
+# prints "good luck" in the 8th iteration
+# and "Best School" for the rest of the loop
 
 i=0
 
