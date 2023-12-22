@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# this script list the current running processes under bash using pgrep
+
+pgrep -l bash
