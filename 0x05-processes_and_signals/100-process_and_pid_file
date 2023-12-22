@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# This script does all of the following:
+# Creates a file /var/run/holbertonscript.pid containing the script PID
+# Displays "To infinity and beyond" indefinitely
+# Displays "I hate the kill command" upon receiving a SIGTERM
+# Displays "Y U no love me?!" upon receiving a SIGINT
+# Deletes the file /var/run/holbertonscript.pid and terminates upon
+# receiving a SIGQUIT or SIGTERM
+
+timeToDie() {
+  rm /var/run/holbertonscript.pid
+  exit
+}
+timeToTrap() {
+  trap 'echo "Y U no love me?!"' SIGINT
+  trap 'echo "I hate the kill command" && terminator' SIGTERM
+  trap 'timeToDie' SIGQUIT
+}
+
+echo "$$" > /var/run/holbertonscript.pid
+timeToTrap
+
+while true
+do
+  echo "To infinity and beyond"
+  sleep 2
+done
