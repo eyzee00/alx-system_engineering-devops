@@ -19,10 +19,10 @@ timeToTrap() {
 
 echo "$$" > /var/run/myscript.pid
 
-timeToTrap
 
 while true
 do
   echo "To infinity and beyond"
   sleep 2s
+  timeToTrap
 done
