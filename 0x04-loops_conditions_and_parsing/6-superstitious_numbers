@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# this script follows the same as the last one
+
+i=0
+
+while [ $i -lt 20 ]; do
+	if [ $i -eq 3 ]; then
+		echo "bad luck from China"
+	elif [ $i -eq 8 ]; then
+		echo "bad luck from Japan"
+	elif [ $i -eq 16 ]; then
+		echo "bad luck from Italy"
+	else
+		echo "$i"
+	fi
+	((i++))
+done
