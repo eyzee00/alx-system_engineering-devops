@@ -13,15 +13,16 @@ timeToDie() {
 }
 timeToTrap() {
   trap 'echo "Y U no love me?!"' SIGINT
-  trap 'echo "I hate the kill command" && terminator' SIGTERM
+  trap 'echo "I hate the kill command" && timeToDie' SIGTERM
   trap 'timeToDie' SIGQUIT
 }
 
 echo "$$" > /var/run/myscript.pid
 
+timeToTrap
+
 while true
 do
   echo "To infinity and beyond"
   sleep 2s
-  timeToTrap
 done
