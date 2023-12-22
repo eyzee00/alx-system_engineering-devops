@@ -1,5 +1,3 @@
 #!/usr/bin/env bash
 # this script lists all the running processes in a user readable format
-
 ps aux
-
