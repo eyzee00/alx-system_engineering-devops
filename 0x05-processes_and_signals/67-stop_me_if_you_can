@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# this script tries to kill a process immune to SIGTERM
+
+pkill -f 7-highlander

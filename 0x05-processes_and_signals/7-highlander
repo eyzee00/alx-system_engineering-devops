@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# this script runs indefinitely and ignores the sigterm signal
+
+trap 'echo "I am invincible!!!"' SIGTERM
+bug=1
+
+while [ $bug -eq 1 ]; do
+	echo "To infinity and beyond"
+	sleep 2s
+done
