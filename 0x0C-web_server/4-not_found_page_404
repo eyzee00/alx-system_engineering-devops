@@ -6,6 +6,7 @@ apt-get -y update
 apt-get -y install nginx
 
 echo 'Hello World!' > /etc/nginx/html/index.html
+touch /etc/nginx/html/404.html
 echo 'Ceci nest pas une page' > /etc/nginx/html/404.html
 
 
