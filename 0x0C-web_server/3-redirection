@@ -14,7 +14,7 @@ printf %s "server {
      index       index.html index.htm;
 
      location /redirectme {
-     return 301 https://youtube.com/;
+     return 301 http://youtube.com/;
      }
 }" > /etc/nginx/sites-available/default
 
