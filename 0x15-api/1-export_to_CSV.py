@@ -7,10 +7,10 @@ from sys import argv
 
 if __name__ == "__main__":
     user_id = argv[1]
+    string = 'https://jsonplaceholder.typicode.com/todos?userId={}'
     user = requests.get('https://jsonplaceholder.typicode.com/users/{}'.
                         format(user_id)).json()
-    todos = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'.
-                         format(user_id)).json()
+    todos = requests.get(string.format(user_id)).json()
 
     with open("{}.csv".format(user_id), 'w') as csvfile:
         writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
