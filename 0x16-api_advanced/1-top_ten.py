@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-import requests
 """
 Module to interface with the reddit api
 """
+import requests
 
 
 def top_ten(subreddit):
